@@ -1,0 +1,158 @@
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,700&family=Montserrat:wght@500;700&display=swap");
+.root {
+  --Darkcyan: hsl(158, 36%, 37%);
+  --Cream: hsl(30, 38%, 92%);
+  --Verydarkblue: hsl(212, 21%, 14%);
+  --Darkgrayishblue: hsl(228, 12%, 48%);
+  --White: hsl(0, 0%, 100%);
+}
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+main {
+  width: 375px;
+  background-color: hsl(30, 38%, 92%);
+}
+.card {
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.img {
+  height: 16rem;
+  background-image: url("/images/image-product-mobile.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-top-left-radius: 1rem;
+  border-top-right-radius: 1rem;
+}
+.info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: hsl(0, 0%, 100%);
+  border-bottom-left-radius: 1rem;
+  border-bottom-right-radius: 1rem;
+}
+.tittle {
+  width: 19rem;
+}
+.tittle > p {
+  text-transform: uppercase;
+  margin: 0;
+}
+.tittle > h1 {
+  font-family: "Fraunces", serif;
+  margin: 0 0.5rem;
+  color: hsl(212, 21%, 14%);
+}
+.description {
+  width: 19rem;
+  text-align: left;
+}
+
+.description > p {
+  font-size: 14px;
+  margin: 0 1rem;
+  line-height: 20px;
+}
+
+.add {
+  width: 19rem;
+  display: flex;
+  flex-direction: column;
+  padding: 1rem;
+}
+.price {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  height: 4rem;
+}
+.price > h2 {
+  color: hsl(158, 36%, 37%);
+  font-family: "Fraunces", serif;
+  font-weight: 700;
+  font-size: 2rem;
+}
+.price > p {
+  padding-left: 1rem;
+}
+button {
+  background-color: hsl(158, 36%, 37%);
+  color: white;
+  width: 19rem;
+  margin: auto;
+  height: 2.5rem;
+  border-radius: 0.5rem;
+  cursor: pointer;
+  border: none;
+}
+button:hover {
+  background-color: hsla(158, 31%, 12%, 0.911);
+}
+button > img {
+  margin-right: 0.8rem;
+}
+.attribution {
+  font-size: 11px;
+  text-align: center;
+}
+.attribution a {
+  color: hsl(228, 45%, 44%);
+}
+/*para pc*/
+@media screen and (min-width: 900px) {
+  main {
+    width: 1440px;
+    height: 800px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .card {
+    flex-direction: row;
+    justify-content: center;
+  }
+  .tittle{
+    width: 17rem;
+    padding: 2rem;
+  }
+  .tittle>p{
+    margin: 1rem 0;
+  }
+  .tittle>h1{
+    margin: 0;
+  }
+  .description{
+    position: relative;
+    top: 1rem;
+  }
+  .description>p{
+    font-size: 19px;
+    margin: 4px 1rem;
+    line-height: 23px;
+  }
+  .add{
+    position: relative;
+    top: 2rem;
+  }
+  .img {
+    width: 22rem;
+    height: 33rem;
+    background-image: url("/images/image-product-desktop.jpg");
+    background-size: cover;
+    border-top-right-radius: 0rem;
+    border-bottom-left-radius: 1rem;
+  }
+  .info {
+    border-bottom-left-radius: 0rem;
+    border-top-right-radius: 1rem;
+  }
+}
